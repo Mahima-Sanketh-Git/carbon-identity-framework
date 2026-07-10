@@ -107,6 +107,11 @@
             <groupId>org.wso2.carbon.identity.framework</groupId>
             <artifactId>org.wso2.carbon.identity.claim.metadata.mgt</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.wso2.carbon.identity.organization.management.core</groupId>
+            <artifactId>org.wso2.carbon.identity.organization.management.service</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -168,7 +173,7 @@
                             version="${carbon.identity.package.import.version.range}",
                             org.wso2.carbon.identity.user.action.api.exception;
                             version="${carbon.identity.package.import.version.range}",
-                            org.wso2.carbon.core.util; version="${carbon.kernel.package.import.version.range}",
+org.wso2.carbon.core.util; version="${carbon.kernel.package.import.version.range}",
                             org.wso2.carbon.identity.event.*; version="${carbon.identity.package.import.version.range}",
                             org.wso2.carbon.identity.central.log.mgt.utils;
                             version="${carbon.identity.package.import.version.range}",
@@ -178,7 +183,13 @@
                             com.fasterxml.jackson.annotation.*;
                             version="${com.fasterxml.jackson.annotation.version.range}",
                             org.wso2.carbon.utils; version="${carbon.kernel.package.import.version.range}",
-                            org.slf4j; version="${org.slf4j.imp.pkg.version.range}"
+                            org.slf4j; version="${org.slf4j.imp.pkg.version.range}",
+                            org.wso2.carbon.identity.organization.management.service;
+                            version="${org.wso2.carbon.identity.organization.management.core.version.range}",
+                            org.wso2.carbon.identity.organization.management.service.model;
+                            version="${org.wso2.carbon.identity.organization.management.core.version.range}",
+                            org.wso2.carbon.identity.organization.management.service.constant;
+                            version="${org.wso2.carbon.identity.organization.management.core.version.range}",
                         </Import-Package>
                         <Export-Package>
                             !org.wso2.carbon.identity.flow.execution.internal,

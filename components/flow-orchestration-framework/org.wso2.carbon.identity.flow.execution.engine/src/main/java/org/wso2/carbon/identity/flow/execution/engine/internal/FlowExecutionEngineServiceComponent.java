@@ -39,6 +39,7 @@ import org.wso2.carbon.identity.flow.mgt.FlowMgtService;
 import org.wso2.carbon.identity.input.validation.mgt.services.InputValidationManagementService;
 import org.wso2.carbon.identity.user.profile.mgt.association.federation.FederatedAssociationManager;
 import org.wso2.carbon.user.core.service.RealmService;
+import org.wso2.carbon.identity.organization.management.service.OrganizationManager;
 
 import java.util.Comparator;
 

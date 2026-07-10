@@ -48,7 +48,6 @@ public class FlowExecutionEngineDataHolder {
     private FederatedAssociationManager federatedAssociationManager;
     private IdentityEventService identityEventService;
     private List<FlowExecutionListener> flowExecutionListeners = new ArrayList<>();
-
     private FlowExecutionEngineDataHolder() {
 
     }
