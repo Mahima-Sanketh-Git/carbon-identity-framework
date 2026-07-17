@@ -29,8 +29,11 @@ public class Constants {
     public static final String STATUS_PROMPT_ONLY = "PROMPT_ONLY";
     // Constants for user attributes.
     public static final String CLAIM_URI_PREFIX = "http://wso2.org/claims/";
+    public static final String ORG_ATTR_PREFIX = "http://wso2.org/flow/org";
     public static final String USERNAME_CLAIM_URI = "http://wso2.org/claims/username";
     public static final String PASSWORD_KEY = "password";
+    public static final String ORG_NAME_KEY = "organizationName";
+    public static final String ORG_HANDLER_KEY = "organizationHandler";
     public static final String CONSENT_KEY = "consent";
     public static final String PREFERENCE_KEY = "preference";
     // Constants for DataDTO parameters.

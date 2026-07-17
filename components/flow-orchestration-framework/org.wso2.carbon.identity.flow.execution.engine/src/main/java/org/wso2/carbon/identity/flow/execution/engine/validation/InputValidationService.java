@@ -75,6 +75,8 @@ import static org.wso2.carbon.identity.flow.execution.engine.Constants.ExecutorS
 import static org.wso2.carbon.identity.flow.execution.engine.Constants.ExecutorStatus.STATUS_USER_INPUT_REQUIRED;
 import static org.wso2.carbon.identity.flow.execution.engine.Constants.IDENTIFIER;
 import static org.wso2.carbon.identity.flow.execution.engine.Constants.LENGTH_CONFIG;
+import static org.wso2.carbon.identity.flow.execution.engine.Constants.ORG_HANDLER_KEY;
+import static org.wso2.carbon.identity.flow.execution.engine.Constants.ORG_NAME_KEY;
 import static org.wso2.carbon.identity.flow.execution.engine.Constants.OTP_LENGTH;
 import static org.wso2.carbon.identity.flow.execution.engine.Constants.OTP_VARIANT;
 import static org.wso2.carbon.identity.flow.execution.engine.Constants.CONSENT_KEY;
@@ -279,7 +281,12 @@ public class InputValidationService {
             if (userInput.getKey().startsWith(CLAIM_URI_PREFIX)) {
                 validateUserClaims(context.getTenantDomain(), userInput.getKey(), userInput.getValue(),
                         skipUniquenessValidation);
-            } else if (userInput.getKey().equals(PASSWORD_KEY)) {
+            }else if (userInput.getKey().equals(ORG_NAME_KEY)) {
+               context.getFlowOrganization().setOrganizationName(userInput.getValue());
+            }else if (userInput.getKey().equals(ORG_HANDLER_KEY)) {
+                context.getFlowOrganization().setOrganizationHandle(userInput.getValue());
+            }
+            else if (userInput.getKey().equals(PASSWORD_KEY)) {
                 validatePasswordFormat(context.getTenantDomain(), userInput.getValue());
             }
         }
